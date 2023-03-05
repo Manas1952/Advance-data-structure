@@ -13,6 +13,7 @@ public class Vectors {
         vector.addElement(4);
         vector.add(5);
 
+
         vector.forEach(element -> {
             System.out.print(element + " ");
         });

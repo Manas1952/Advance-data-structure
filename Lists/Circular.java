@@ -32,9 +32,20 @@ public class Circular {
 
     void pop() {
         Node temp = head;
-        if (temp.next == tail) {
+
+        if (head == null) {
+            System.out.println("underflow");
+        }
+        else if (temp.next == tail) {
+            head = null;
+            tail = null;
+        }
+        else {
+            while (temp.next != tail){
+                temp = temp.next;
+            }
             temp.next = head;
-            tail.next = null;
+            tail = temp;
         }
     }
 
@@ -61,6 +72,7 @@ public class Circular {
         circular.push(2);
         circular.push(3);
 
+        circular.pop();
         circular.pop();
 
         circular.print();
