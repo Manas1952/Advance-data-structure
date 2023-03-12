@@ -66,7 +66,8 @@ public class Hashtable1 {
         }
     }
 
-    int findKey(String key) {
+    int findKey(String key)
+    {
         int hashedkey = hashKey(key);
 
         if (hashTable[hashedkey] != null && hashTable[hashedkey].key.equals(key)) {
@@ -79,6 +80,7 @@ public class Hashtable1 {
         while (hashedkey != stopIndex && hashTable[hashedkey] != null && !hashTable[hashedkey].key.equals(key)) {
             hashedkey = (hashedkey + 1) % hashTable.length;
         }
+
         if (stopIndex == hashedkey) {
             return -1;
         }
