@@ -1,7 +1,9 @@
 package Collections.List;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 
 public class ArrayList_ {
     public static void main(String[] args) {
@@ -10,6 +12,10 @@ public class ArrayList_ {
         arrayList.add("1");
         arrayList.add(1, "2");
         arrayList.add("3");
+
+        List arrayList2 = Collections.unmodifiableList(arrayList);
+
+        arrayList2.add(1);
 
         ArrayList<String> arrayList1 = new ArrayList<>();
         arrayList1.add(0, "3");
